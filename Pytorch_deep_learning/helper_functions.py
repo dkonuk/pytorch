@@ -106,7 +106,7 @@ def accuracy_fn(y_true, y_pred):
         [torch.float]: Accuracy value between y_true and y_pred, e.g. 78.45
     """
     correct = torch.eq(y_true, y_pred).sum().item()
-    acc = (correct / len(y_pred)) * 100
+    acc = (correct / len(y_true)) * 100
     return acc
 
 
